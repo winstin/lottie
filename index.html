@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lottie Web Demo</title>
+  </head>
+
+  <body>
+    <h1>Lottie Web Demo</h1>
+    <div id="lottie" style="width: 100vw; height: 100vh"></div>
+
+    <!-- 引入 Lottie Web 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+        
+      // 使用 Lottie Web 加载 JSON 动画
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("lottie"), // 占位符元素
+        loop: true,
+        autoplay: true,
+        path: `http://localhost:8080/data.json`,
+        // 导出的 JSON 格式动画文件路径
+      });
+    </script>
+  </body>
+</html>
